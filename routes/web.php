@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/about', function(){
+//     return view('pages.about');
+// });
+
+// Route::get('/user/{id}/{name}', function($id, $name){
+//     return 'This is '. $name . ' with the id of '. $id .'.';
+// });
+
+Route::get('/', 'pagesController@index');
+Route::get('/about', 'pagesController@about');
+Route::get('/services', 'pagesController@services');
